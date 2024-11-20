@@ -268,22 +268,6 @@ Vertexシェーダー(input)
 
 ```
 
-```mermaid
-flowchart
-    init["出力用構造体の初期化"]
-    setup_instance_id["（可能な場合）インスタンスIDを設定する"]
-    init_vertex_output_stereo["XR・VR等のレンダーターゲットが二つある場合の頂点設定を行う"]
-
-    ifdef_fog_fragment{"フォグを利用する"}
-    compute_fog["FogFactorの計算"]
-    transform_tex["アルベドテクスチャのScale・Offsetの適用"]
-    init --> setup_instance_id
-    setup_instance_id --> init_vertex_output_stereo
-    init_vertex_output_stereo --> ifdef_fog_fragment
-    ifdef_fog_fragment --> compute_fog
-
-```
-
 ## フラグメントシェーダー [WIP]
 
 ### マクロ
@@ -298,7 +282,18 @@ Vertex Shaderでも説明したため省略
 - 配置場所: `UnityInstancing.cginc`
 - 処理内容: ステレオマルチビューが有効な時に`unity_StereoEyeIndex`キーワードを設定する
 
-#### 
+#### SETUP_DEBUG_TEXTURE_DATA(inputData, uv) 
+
+```
+#define SETUP_DEBUG_TEXTURE_DATA(inputData, uv)                   SetupDebugDataTexture(inputData, TRANSFORM_TEX(uv.xy, unity_MipmapStreaming_DebugTex), unity_MipmapStreaming_DebugTex_TexelSize, unity_MipmapStreaming_DebugTex_MipInfo, unity_MipmapStreaming_DebugTex_StreamInfo, unity_MipmapStreaming_DebugTex)
+```
+
+- 配置場所: `Debugging3D.hlsl`
+- 処理内容: 
+
+#### void ApplyDecalToSurfaceData(float4 positionCS, inout SurfaceData surfaceData, inout InputData inputData)
+
+
 
 ### 関数
 
