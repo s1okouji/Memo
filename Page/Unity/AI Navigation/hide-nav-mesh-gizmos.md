@@ -10,4 +10,4 @@ GameView右上のGizmosに昔はあったみたいだが、新しいNavigation�
 
 ## 参考資料
 
-https://discussions.unity.com/t/how-to-hide-the-navmesh-gizmo-in-2022-2/904812
+<https://discussions.unity.com/t/how-to-hide-the-navmesh-gizmo-in-2022-2/904812>
