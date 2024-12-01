@@ -19,6 +19,6 @@ Animatorの更新はデフォルトではNnormal、即ちUpdateの呼び出し�
 
 ## 参考
 
-1. https://docs.unity3d.com/ja/2022.3/Manual/class-Animator.html
-2. https://docs.unity3d.com/ja/2022.3/Manual/ExecutionOrder.html
-3. https://docs.unity3d.com/ja/2022.3/ScriptReference/MonoBehaviour.LateUpdate.html
+1. <https://docs.unity3d.com/ja/2022.3/Manual/class-Animator.html>
+2. <https://docs.unity3d.com/ja/2022.3/Manual/ExecutionOrder.html>
+3. <https://docs.unity3d.com/ja/2022.3/ScriptReference/MonoBehaviour.LateUpdate.html>
