@@ -4,7 +4,7 @@
 
 ### ソースコード
 
-```
+```hlsl
 Varyings LitPassVertexSimple(Attributes input)
 {
     Varyings output = (Varyings)0;
