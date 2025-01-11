@@ -49,6 +49,25 @@ public int Value
 }
 ```
 
+### Binding可能にするには
+
+`[CreateProperty]`を付与すると、プロパティバッグが作られbindできるようになる.
+
+```c#
+[UxmlAttribute]
+[CreateProperty]
+public int Value
+{
+    get => _value;
+    set
+    {
+        var tmp = value >= 0 ? value : 0;
+        _value = value > _max ? _max : tmp;
+        MarkDirtyRepaint();
+    }
+}
+```
+
 ## 手順 (Unity 2022以前)
 
 1. `VisualElement`クラスを継承したクラスを作成する.
